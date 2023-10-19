@@ -1,0 +1,149 @@
+<html>
+<head>
+<title>SignIn</title>
+<style type="text/css">
+    
+   body
+    {
+    margin:0px;
+	background-color:lightgreen;
+	font-family:Arial, Helvetica, sans-serif;
+    }#main
+	{
+	width:600px; height:auto; 
+	overflow:hidden; 
+	padding-bottom:20px; 
+	margin-left:auto; 
+	margin-right:auto; 
+    border-radius:5px; 
+	padding-left:10px; 
+	margin-top:100px; 
+	border-top:3px double #f1f1f1; 
+    border-bottom:3px double #f1f1f1; 
+	padding-top:20px;
+    }
+    
+    #main table
+	{
+	font-family:"Comic Sans MS", cursive;
+	}
+    
+    #main .textbox
+	{
+	height:28px; width:230px; 
+	border:1px solid #f26724; 
+	color:#fd7838; 
+	font-weight:bold; 
+	border-left:5px solid #f7f7f7; 
+	opacity:0.9;
+	}
+    
+    #main .textbox:focus
+	{
+	
+	height:28px; border:1px solid #f26724; 
+	outline:none; 
+	border-left:5px solid #f7f7f7;
+	}
+
+    #main .btn
+	{
+	width:150px; height:32px; 
+	outline:none;  color:#f7f7f7; 
+	font-weight:bold; 
+	border:0px solid #f26724; 
+    text-shadow: 0px 0.5px 0.5px #fff; 
+	border-radius: 2px; 
+	font-weight: 600; 
+	color: #f26724; 
+	letter-spacing: 1px; 
+    font-size:14px; 
+	background-color:#f1f1f1; 
+	}
+  
+    #main .btn:hover
+	{
+	background-color:#f26724; 
+	outline:none;  
+	border-radius: 2px; 
+	color:#f1f1f1; 
+	border:1px solid #f1f1f1;
+    }
+	</style>
+<script>
+function log()
+{
+
+var Usernamename=document.getElementById("Username").value;
+if(username==null || username=='')
+{
+alert('username cant be blank');
+return false;
+}
+
+var pw1 = document.getElementById("pswd1").value;
+	if(pw1 == "") {
+    document.getElementById("message1").innerHTML = "**Fill the password please!**";
+    return false;
+    }
+    
+    if(pw1.length < 8) {
+    document.getElementById("message1").innerHTML = "**Password length must be atleast 8 characters";
+    return false;
+    }
+
+    
+    if(pw1.length > 15) {
+    document.getElementById("message1").innerHTML = "**Password length must not exceed 15 characters";
+    return false;
+    }
+  
+ 
+ var email = document.getElementById("email").value;
+var atposition=x.indexOf("@");
+var dotposition=x.lastIndexOf(".");
+if (atposition <1 || dotposition
+<atposition +2 || dotposition +2>=x.length)
+{
+alert("please enter valid email address at position and dot position");
+return false;
+}
+}
+function login()
+	{
+	alert("Your login is successfull!");
+	window.open("file:///D:/PROJECT/Educational%20Website/ApplicationForm.html"); 
+    }
+
+
+</script>
+<body>
+<div id="main">
+	<div class="h-tag">
+	<h2>Login To Your Account</h2>
+	</div>
+<div class="Login">
+	<table cellspacing="2" align="center" cellpadding="8" border="0">
+	<tr>
+	<td align="right">Enter Email ID :</td>
+	<td><input type="text" placeholder="Enter Email ID here" id="email" class="textbox" /></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Username :</td>
+	<td><input type="text" placeholder="Enter Username here" id="username" class="textbox" /></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Password :</td>
+	<td><input type="password" placeholder="Enter Password here" id="pswd1" class="textbox" /></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td><input type="submit" value="Login" class="btn" onclick="login()" /></td>
+	</tr>
+	</table>
+	</div>
+	
+	</div>
+</form>
+</body>
+</html>

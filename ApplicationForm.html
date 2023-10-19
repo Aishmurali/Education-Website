@@ -1,0 +1,235 @@
+<html>
+<head>
+<title>Application Form</title>
+<style type="text/css">
+
+    
+   body
+    {
+	margin:0px;
+	background-color:FF6347;
+    font-family:Arial, Helvetica, sans-serif;
+    }
+    
+    #main
+	{
+	width:600px; height:auto; 
+	
+	padding-bottom:20px; 
+	margin-left:auto; 
+	margin-right:auto; 
+    border-radius:5px; 
+	padding-left:10px; 
+	margin-top:100px; 
+	border-top:3px double #f1f1f1; 
+    border-bottom:3px double #f1f1f1; 
+	padding-top:20px;
+    }
+    
+    
+    
+    #main .textbox
+	{
+	height:28px; width:230px; 
+	border:1px solid #f26724; 
+	color:#fd7838; 
+	font-weight:bold; 
+	border-left:5px solid #f7f7f7; 
+	opacity:0.9;
+	}
+    
+    #main .textbox:focus
+	{
+	
+	height:28px; border:1px solid #f26724; 
+	outline:none; 
+	border-left:5px solid #f7f7f7;
+	}
+
+    #main .btn
+	{
+	width:150px; height:32px; 
+	outline:none;  color:#f7f7f7; 
+	font-weight:bold; 
+	border:0px solid #f26724; 
+    text-shadow: 0px 0.5px 0.5px #fff; 
+	border-radius: 2px; 
+	font-weight: 600; 
+	color: #f26724; 
+	letter-spacing: 1px; 
+    font-size:14px; 
+	background-color:#f1f1f1; 
+	}
+  
+    #main .btn:hover
+	{
+	background-color:#f26724; 
+	outline:none;  
+	border-radius: 2px; 
+	color:#f1f1f1; 
+	border:1px solid #f1f1f1;
+    }
+	</style>
+<script>
+function ApplicationForm()
+{
+var name=document.getElementById("name").value;
+if(name==null || name=='')
+{
+alert('Name cant be blank');
+return false;
+}
+var gender=document.getElementById("gender").value;
+if(gender==null || gender=='')
+{
+alert('Gender cant be blank');
+return false;
+}
+var dob=document.getElementById("dob").value;
+if(dob==null || dob=='')
+{
+alert('DOB cant be blank');
+return false;
+}
+var fathername=document.getElementById("fathername").value;
+if(fathername==null || fathername=='')
+{
+alert('Fathername cant be blank');
+return false;
+}
+var mothername=document.getElementById("mothername").value;
+if(mothername==null || mothername=='')
+{
+alert('Mothername cant be blank');
+return false;
+}
+
+var mobile = document.getElementById("mobile").value;
+	if(mobile == "") {
+    document.getElementById("message1").innerHTML = "**Fill the Mobile Number please!**";
+    return false;
+    }
+    
+    if(pw1.length = 10) {
+    document.getElementById("message1").innerHTML = "**Mobile Number length must be 10 Numbers";
+    return false;
+    }
+
+var email = document.getElementById("email").value;
+var atposition=x.indexOf("@");
+var dotposition=x.lastIndexOf(".");
+if (atposition <1 || dotposition
+<atposition +2 || dotposition +2>=x.length)
+{
+alert("please enter valid email address at position and dot position");
+return false;
+}
+var address=document.getElementById("address").value;
+if(address==null || address=='')
+{
+alert('Address cant be blank');
+return false;
+}
+}
+function clearFunc()
+	{
+    document.getElementById("name").value="";
+	document.getElementById("dob").value="";
+	document.getElementById("fathername").value="";
+	document.getElementById("mothername").value="";
+	document.getElementById("mobile").value="";
+    document.getElementById("email").value="";
+    document.getElementById("address").value="";
+	}
+	function submit()  
+ { 
+alert("Your Application is Submitted Successfully!"); 
+  }   
+  function signout()  
+ {    
+alert("You Have Signed Out Successfully!"); 
+window.open("file:///D:/PROJECT/Educational%20Website/Home.html"); 
+  }  
+  function payment()  
+ { 
+window.open("file:///D:/PROJECT/Educational%20Website/OnlinePayment.html"); 
+  }   
+  
+ 
+</script>
+<body>
+<div id="main">
+	<div class="Application">
+	<h2>Application Form</h2>
+	</div>
+<div class="ApplicationForm">
+	<table cellspacing="2" align="center" cellpadding="8" border="0">
+	<tr>
+	<td align="right">Name of the Student:</td>
+	<td><input type="text" id="name" class="textbox" /></td>
+	</tr>
+	<tr>
+	<td align="right">Date Of Birth:</td>
+	<td><input type="number" id="dob" class="textbox" /></td>
+	</tr>
+	<tr>
+	<td align="right">Gender :</td>
+  <td><select id="gender" name="gender">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Others">Others</option>
+  </select></td>
+	</tr>
+	<tr>
+	<td align="right">Father Name :</td>
+	<td><input type="text"  id="fathername" class="textbox" /></td>
+	</tr>
+	<tr>
+	<td align="right">Mother Name :</td>
+	<td><input type="text"  id="mothername" class="textbox" /></td>
+	</tr>
+	<tr>
+	<td align="right">Choose Your Course :</td>
+  <td><select id="courses" name="courses">
+    <option value="DotNet">DotNet</option>
+    <option value="Webdevelopment">Webdevelopment</option>
+    <option value="Java">Java</option>
+    <option value="DataScience">DataScience</option>
+	<option value="Cloud Computing">CloudComputing</option>
+  </select></td>
+	</tr>
+	<tr>
+	<td align="right">Mobile No :</td>
+	<td><input type="number" id="mobile" class="textbox" /></td>
+	</tr>
+	<tr>
+	<td align="right">Email ID :</td>
+	<td><input type="text" id="email" class="textbox" /></td>
+	</tr>
+	<tr>
+	<td align="right">Address :</td>
+	<td><input type="text" id="address" class="textbox" /></td>
+	</tr>
+	<tr>
+	<td align="right">Payment Details :</td>
+  <td><select id="pay" name="pay">
+    <option value="Cash">Cash</option>
+    <option value="Card">Card</option>
+    <option value="Online Payment">Online Payment</option>
+  </select></td>
+	</tr>
+	<tr>
+	<td><input type="reset" value="Clear " onclick="clearFunc()" class="btn" /></td>
+	<td><input type="submit" value="Submit" class="btn" onclick="submit()" /></td>
+	<td><input type="submit" value="SignOut" class="btn" onclick="signout()" /></td>
+	<td><input type="submit" value="Online Payment" class="btn" onclick="payment()" /></td>
+	</tr>
+	
+	</tr>
+	</table>
+	</div>
+	
+	</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<html>
+<head>
+<title>Payment</title>
+<style type="text/css">
+    
+   body
+    {
+    margin:0px;
+	background-color:008B8B;
+	font-family:Arial, Helvetica, sans-serif;
+    }
+	#main
+	{
+	width:600px; height:auto; 
+	overflow:hidden; 
+	padding-bottom:20px; 
+	margin-left:auto; 
+	margin-right:auto; 
+    border-radius:5px; 
+	padding-left:10px; 
+	margin-top:100px; 
+	border-top:3px double #f1f1f1; 
+    border-bottom:3px double #f1f1f1; 
+	padding-top:20px;
+    }
+    
+    #main table
+	{
+	font-family:"Comic Sans MS", cursive;
+	}
+    
+    #main .textbox
+	{
+	height:28px; width:230px; 
+	border:1px solid #f26724; 
+	color:#fd7838; 
+	font-weight:bold; 
+	border-left:5px solid #f7f7f7; 
+	opacity:0.9;
+	}
+    
+    #main .textbox:focus
+	{
+	
+	height:28px; border:1px solid #f26724; 
+	outline:none; 
+	border-left:5px solid #f7f7f7;
+	}
+
+    #main .btn
+	{
+	width:150px; height:32px; 
+	outline:none;  color:#f7f7f7; 
+	font-weight:bold; 
+	border:0px solid #f26724; 
+    text-shadow: 0px 0.5px 0.5px #fff; 
+	border-radius: 2px; 
+	font-weight: 600; 
+	color: #f26724; 
+	letter-spacing: 1px; 
+    font-size:14px; 
+	background-color:#f1f1f1; 
+	}
+  
+    #main .btn:hover
+	{
+	background-color:#f26724; 
+	outline:none;  
+	border-radius: 2px; 
+	color:#f1f1f1; 
+	border:1px solid #f1f1f1;
+    }
+	</style>
+<script>
+function log()
+{
+var card=document.getElementById("card").value;
+if(card==null || card=='')
+{
+alert('card.no cant be blank');
+return false;
+}
+var name=document.getElementById("name").value;
+if(name==null || name=='')
+{
+alert('username cant be blank');
+return false;
+}
+
+var cvv = document.getElementById("cvv").value;
+	if(cvv == "") {
+    document.getElementById("message1").innerHTML = "**Fill the password please!**";
+    return false;
+    }
+    
+    if(cvv.length =3) {
+    document.getElementById("message1").innerHTML = "**cvv length must be atleast 3 numbers";
+    return false;
+    }
+
+    
+}
+function pay()
+	{
+	alert("Your Payment is successfull!");
+	window.open("file:///D:/PROJECT/Educational%20Website/ApplicationForm.html"); 
+    }
+
+
+</script>
+<body>
+<div id="main">
+	<div class="h-tag">
+	<h2>Enter Your Payment Details</h2>
+	</div>
+<div class="Login">
+	<table cellspacing="2" align="center" cellpadding="8" border="0">
+	<tr>
+	<td align="right">Enter Card Number :</td>
+	<td><input type="number"  id="card" class="textbox" /></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Card Holder Name :</td>
+	<td><input type="text" id="name" class="textbox" /></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Expiry Date :</td>
+	<td><input type="number"  id="date" class="textbox" /></td>
+	</tr>
+	<tr>
+	<td align="right">Enter CVV Number :</td>
+	<td><input type="password" id="cvv" class="textbox" /></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td><input type="submit" value="Pay" class="btn" onclick="pay()" /></td>
+	</tr>
+	</table>
+	</div>
+	
+	</div>
+</form>
+</body>
+</html>
